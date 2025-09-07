@@ -108,5 +108,18 @@ import java.time.LocalDateTime;
             return task;
 
         }
+
+        public static RequestDTO TaskToDto(Task task){
+            RequestDTO dto = new RequestDTO();
+            dto.setTaskName(task.getTaskName());
+            dto.setTaskDescription(task.getTaskDescription());
+            dto.setTaskStatus(task.getTaskStatus());
+            dto.setTaskPriority(task.getTaskPriority());
+            dto.setTaskCategory(task.getTaskCategory());
+            dto.setTaskStartTime(task.getTaskStartTime());
+            dto.setTaskEndTime(task.getTaskEndTime());
+            return dto;
+
+        }
     }
 
